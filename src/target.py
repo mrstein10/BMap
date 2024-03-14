@@ -1,12 +1,14 @@
 from .db import *
 
-def main(command):
+def main(command) -> str:
+    ip = ""
     if "set" in command:
         ip = command.split(" ")[2]
         setLHost(ip)
         print(f"LHOST -> {ip}")
     elif "get" in command:
         getHosts()
+    return ip
 
 def setLHost(ip) -> None:
 	target = getTarget(ip)

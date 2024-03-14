@@ -10,6 +10,14 @@ def getAllTargets() -> list:
 	cur.close()
 
 	return rows
+ 
+def getUsedTarget() -> list:
+	cur = connection.cursor()
+	cur.execute(f"SELECT ip FROM targets WHERE inUse=1")
+
+	rows = cur.fetchall()
+	cur.close
+	return rows
 
 def getTarget(ip) -> list:
 	cur = connection.cursor()

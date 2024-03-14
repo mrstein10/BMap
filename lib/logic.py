@@ -1,7 +1,7 @@
 import os
 import subprocess
-from modules.scanner.main import *
-from modules.exploiter.exploits import *
+#from modules.scanner.main import *
+#from modules.exploiter.exploits import *
 from lib.command import sanitizeCom
 
 def main() -> None:
