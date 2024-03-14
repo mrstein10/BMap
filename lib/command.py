@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-commands = ["clear", "nmap"]
+commands = ["clear", "nmap", "ls"]
 ret = False
 
 def sanitizeCom(command) -> bool:

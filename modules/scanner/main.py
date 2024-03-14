@@ -3,6 +3,7 @@ from modules.scanner.options import *
 from lib.command import sanitizeCom
 from src.db import *
 from src.target import *
+from modules.scanner.nmap import *
 
 closeCommand = ["back", "exit", "close"]
 
@@ -15,6 +16,10 @@ def main(command,targets=""):
 		#	ip = command.split(" ")[2]
 		#	setLHost(ip)
 		#	print(f"LHOST -> {ip}")
+		case "run":
+			mainNMap("127.0.0.1")
+		case "exploit":
+			mainNMap("127.0.0.1")
 		case "results":
 			#IPServices
 			beautifyServices()
